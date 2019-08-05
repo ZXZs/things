@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		*{
+			margin:1rem;
+		}
+	</style>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="./materialize.css">
+	<title>Vue Preloader Demo</title>
+</head>
+<body>
+	<script src="./vue.js"></script>
+	<div id="app">
+		<div class="loader" v-if="loading"><h1 align="center">LOADING</h1></div>
+		<div class="content" v-if="!loading">
+			<h1>Lorem ipsum</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consectetur beatae dicta exercitationem dolore quam obcaecati dignissimos, modi similique mollitia numquam. Numquam itaque molestiae quis, nam neque totam ratione commodi.</p>
+		</div>
+		<script src="./index.js"></script>
+	</div>
+</body>
+</html>

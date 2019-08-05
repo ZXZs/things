@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html style="">
+	<head>
+		<script src="./vue.js"></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>VHVH Timer</title>
+
+		<link rel="stylesheet" href="./materialize.css">
+		<script src="./materialize.js"></script>
+
+		<style>*{margin:1rem;padding:0;}</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<!-- Hours -->
+			<div id="settings" v-if="!works" align="center">
+				<h3>Hours</h3>
+				<h4>{{hours}}</h4>
+				<input v-model="hours" type="range" min="0" max="9" tabindex="0">
+
+				<!-- Minutes -->
+				<h3>Minutes</h3>
+				<h4>{{minutes}}</h4>
+				<input v-model="minutes" type="range" min="0" max="59" tabindex="0">
+
+				<!-- Seconds -->
+				<h3>Seconds</h3>
+				<h4>{{seconds}}</h4>
+				<input v-model="seconds" type="range" min="0" max="59" tabindex="0">
+
+				<button class="waves-effect waves-light btn-large" 
+						style="margin-top:2rem;" @click="useme"
+						>START</button>
+			</div>
+
+			<div align="center" id="timer" v-if="works">
+				<h1>{{hours}}:{{minutes}}:{{seconds}}</h1>
+				<button class="waves-effect waves-light btn-large"
+						style="margin-top:2rem;"
+						@click="stop">STOP</button>
+			</div>
+		</div>
+
+		<script src="./compiler.js"></script>
+		<script src="./index.coffee" type="text/coffeescript"></script>
+	</body>
+</html>

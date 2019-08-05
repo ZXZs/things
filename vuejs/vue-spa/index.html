@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <style></style>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SPA</title>
+        <link rel="stylesheet" type="text/css" href="./materialize.css">
+        <script src="./materialize.js"></script>
+        <script src="./vue.js"></script>
+        <script src="./compiler.js"></script>
+        <script src="./index.coffee" type="text/coffeescript"></script>     
+    </head>
+
+    <body>
+        <div id="app">
+
+            <div class="nav" align="center" v-if="seen"
+            style="margin-top:1rem;">
+                <a href="#" class="btn" @click="page = 1">Page 1</a>
+                <a href="#" class="btn" @click="page = 2">Page 2</a>
+                <a href="#" class="btn" @click="page = 3">Page 3</a>
+                <a href="#" class="btn" @click="page = 4">Page 4</a>
+            </div>
+
+            <div class="content" align="center" v-if="seen">
+                <div class="page1" v-if="page == 1">
+                    <h1>Page 1</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, dolorem?</p>
+                </div>
+
+                <div class="page2" v-if="page == 2">
+                    <h1>Page 2</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error amet fugit voluptas eveniet eaque iusto.</p>
+                </div>
+
+                <div class="page3" v-if="page == 3">
+                    <h1>Page 3</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, reprehenderit?</p>
+                </div>
+
+                <div class="page4" v-if="page == 4">
+                    <h1>Page 4</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, delectus.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
