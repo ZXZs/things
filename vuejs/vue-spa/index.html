@@ -6,25 +6,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>SPA</title>
-        <link rel="stylesheet" type="text/css" href="./materialize.css">
-        <script src="./materialize.js"></script>
-        <script src="./vue.js"></script>
-        <script src="./compiler.js"></script>
-        <script src="./index.coffee" type="text/coffeescript"></script>     
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        
+        <script src="./index.js"></script>     
     </head>
 
     <body>
         <div id="app">
 
-            <div class="nav" align="center" v-if="seen"
-            style="margin-top:1rem;">
+            <div class="nav" align="center" style="margin-top:1rem;">
                 <a href="#" class="btn" @click="page = 1">Page 1</a>
                 <a href="#" class="btn" @click="page = 2">Page 2</a>
                 <a href="#" class="btn" @click="page = 3">Page 3</a>
                 <a href="#" class="btn" @click="page = 4">Page 4</a>
             </div>
 
-            <div class="content" align="center" v-if="seen">
+            <div class="content" align="center">
                 <div class="page1" v-if="page == 1">
                     <h1>Page 1</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, dolorem?</p>
