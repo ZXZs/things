@@ -4,13 +4,15 @@ print(A * B * C * D)
 
 # Task B
 k = int(input())
-c = [0, None]
+c1 = 0 
+c2 = None
 n = 1
 
-while k != c[0]:
+while k != c1:
     x = n ** 2
     if x % 100 == 25:
-        c = [c[0]+1, x]
+        c1 += 1
+        c2 = x
     n += 1
 
-print(c[1])
+print(c2)
