@@ -1,4 +1,5 @@
-// inspired by https://habr.com/ru/post/153845/
+// inspired by 1. https://habr.com/ru/post/153225/
+// inspired by 2. https://habr.com/ru/post/153845/
 
 typealias Recipe = Map<Ingredient, Int>
 
